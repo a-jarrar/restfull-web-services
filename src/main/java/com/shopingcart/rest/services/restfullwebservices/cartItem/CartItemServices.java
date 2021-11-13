@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class CartItemServices {
@@ -34,4 +35,25 @@ public class CartItemServices {
                 .entityToModel(cartItemRepository.save(CartItemMapper.INSTANCE.modelToEntity(oldCartItem)));
     }
 
+    public CartItemModel increaseQuantity(Integer cartItemSeqId) {
+        CartItemModel cartItem = cartItemRepository.findById(cartItemSeqId)
+                .map(CartItemMapper.INSTANCE::entityToModel)
+                .orElseThrow(() -> new RuntimeException("This does not exist"));
+
+        cartItem.setQuantity(cartItem.getQuantity() + 1);
+        return CartItemMapper.INSTANCE
+                .entityToModel(cartItemRepository.save(CartItemMapper.
+                        INSTANCE.modelToEntity(cartItem)));
+    }
+
+    public CartItemModel decreaseQuantity(Integer cartItemSeqId) {
+        CartItemModel cartItem = cartItemRepository.findById(cartItemSeqId)
+                .map(CartItemMapper.INSTANCE::entityToModel)
+                .orElseThrow(() -> new RuntimeException("This cart item does not exist"));
+
+        cartItem.setQuantity(cartItem.getQuantity() - 1);
+        return CartItemMapper.INSTANCE
+                .entityToModel(cartItemRepository.save(CartItemMapper.
+                        INSTANCE.modelToEntity(cartItem)));
+    }
 }

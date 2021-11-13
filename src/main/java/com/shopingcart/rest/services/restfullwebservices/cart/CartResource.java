@@ -41,4 +41,9 @@ public class CartResource {
     public CartModel updateCart(@PathVariable Integer cartId, @RequestBody CartModel cartModel) {
         return cartServices.updateCart(cartId, cartModel);
     }
+
+    @PostMapping("/carts/{cartId}/product/{productId}")
+    public CartModel addToCart(@PathVariable Integer cartId, @PathVariable Integer productId) {
+        return cartServices.addToCart(cartId,productId);
+    }
 }

@@ -15,15 +15,15 @@ insert into category (category_id, category_name) values (1002, 'category3');
 insert into cart (cart_id, total_price) values (1000, 124.32);
 insert into cart (cart_id, total_price) values (1001, 433.55);
 
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1001, 44.85, 1000, 1000);
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1002, 42.5, 1000, 1002);
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1003, 413.15, 1000, 1003);
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1004, 3.45, 1000, 1004);
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1005, 23.5, 1000, 1001);
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1006, 2.35, 1001, 1003);
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1007, 3.25, 1001, 1002);
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1008, 6.5, 1001, 1000);
-insert into cart_item (cart_item_seq_Id, price, cart_cart_Id, product_product_Id) values (1009, 33.95, 1001, 1004);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1001, 44.85, 1, 1000, 1000);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1002, 42.5, 2, 1000, 1002);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1003, 413.15, 1, 1000, 1003);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1004, 3.45, 3, 1000, 1004);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1005, 23.5, 2, 1000, 1001);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1006, 2.35, 1, 1001, 1003);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1007, 3.25, 1, 1001, 1002);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1008, 6.5, 1, 1001, 1000);
+insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1009, 33.95, 5, 1001, 1004);
 
 insert into products_categories (Product_Id, category_id) values (1000, 1000);
 insert into products_categories (Product_Id, category_id) values (1001, 1000);

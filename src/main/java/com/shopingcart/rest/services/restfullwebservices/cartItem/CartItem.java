@@ -14,6 +14,8 @@ public class CartItem {
 
     private Double price;
 
+    private Integer quantity;
+
     @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
 
@@ -24,9 +26,10 @@ public class CartItem {
 
     }
 
-    public CartItem(Integer cartItemSeqId, Double price) {
+    public CartItem(Integer cartItemSeqId, Double price, Integer quantity) {
         this.cartItemSeqId = cartItemSeqId;
         this.price = price;
+        this.quantity = quantity;
     }
 
     public Integer getCartItemSeqId() {
@@ -43,6 +46,14 @@ public class CartItem {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     public Product getProduct() {

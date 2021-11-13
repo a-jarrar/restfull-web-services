@@ -41,4 +41,14 @@ public class CartItemResource {
     public CartItemModel updateCartItem(@PathVariable Integer cartItemSeqId, @RequestBody CartItemModel cartItemModel) {
         return cartItemServices.updateCartItem(cartItemSeqId, cartItemModel);
     }
+
+    @PutMapping("/cartItems/increase/{cartItemSeqId}")
+    public CartItemModel increaseQuantity(@PathVariable Integer cartItemSeqId) {
+        return cartItemServices.increaseQuantity(cartItemSeqId);
+    }
+
+    @PutMapping("/cartItems/decrease/{cartItemSeqId}")
+    public CartItemModel decreaseQuantity(@PathVariable Integer cartItemSeqId) {
+        return cartItemServices.decreaseQuantity(cartItemSeqId);
+    }
 }

@@ -7,17 +7,20 @@ public class CartItemModel {
 
     private Integer cartItemSeqId;
     private Double price;
+    private Integer quantity;
     private ProductModel product;
     private CartModel cart;
 
     public CartItemModel() {
     }
 
-    public CartItemModel(Integer cartItemSeqId, Double price, ProductModel product, CartModel cart) {
+    public CartItemModel(Integer cartItemSeqId, Double price,
+                         ProductModel product, CartModel cart, Integer quantity) {
         this.cartItemSeqId = cartItemSeqId;
         this.price = price;
         this.product = product;
         this.cart = cart;
+        this.quantity = quantity;
     }
 
     public Integer getCartItemSeqId() {
@@ -34,6 +37,14 @@ public class CartItemModel {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     public ProductModel getProduct() {
