@@ -6,6 +6,7 @@ insert into product (Product_Id, product_Name, description, sales_price, discoun
 insert into product (Product_Id, product_Name, description, sales_price, discount_price, brand_brand_Id) values (1002, 'product3', 'my product 3', 20.2, 12.72, 1000);
 insert into product (Product_Id, product_Name, description, sales_price, discount_price, brand_brand_Id) values (1003, 'product4', 'my product 4', 18.4, 14.52, 1001);
 insert into product (Product_Id, product_Name, description, sales_price, discount_price, brand_brand_Id) values (1004, 'product5', 'my product 5', 14.5, 11.88, 1001);
+insert into product (Product_Id, product_Name, description, sales_price, discount_price, brand_brand_Id) values (1007, 'product7', 'my product 7', 22.54, 17.12, 1001);
 
 insert into category (category_id, category_name) values (1000, 'category1');
 insert into category (category_id, category_name) values (1001, 'category2');
