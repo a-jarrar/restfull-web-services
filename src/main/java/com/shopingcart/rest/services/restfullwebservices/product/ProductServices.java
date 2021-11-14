@@ -55,8 +55,8 @@ public class ProductServices {
                         .map(ProductMapper.INSTANCE::entityToModel).collect(Collectors.toList());
 
                 sortList(productList, pageable);
-                int start = Math.min(pageable.getPageNumber() * pageable.getPageSize(), productList.size() - 1);
-                int end = Math.min((pageable.getPageNumber() + 1) * pageable.getPageSize() - 1, productList.size() - 1);
+                int start = Math.min(pageable.getPageNumber() * pageable.getPageSize(), productList.size());
+                int end = Math.min((pageable.getPageNumber() + 1) * pageable.getPageSize() - 1, productList.size());
                 return productList.subList(start, end);
             }
         } else if (Objects.nonNull(brandId)) {

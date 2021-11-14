@@ -1,11 +1,7 @@
 package com.shopingcart.rest.services.restfullwebservices.cartItem;
 
-import com.shopingcart.rest.services.restfullwebservices.cart.Cart;
-import com.shopingcart.rest.services.restfullwebservices.cart.CartModel;
 import com.shopingcart.rest.services.restfullwebservices.category.Category;
 import com.shopingcart.rest.services.restfullwebservices.category.CategoryModel;
-import com.shopingcart.rest.services.restfullwebservices.product.Product;
-import com.shopingcart.rest.services.restfullwebservices.product.ProductModel;
 import org.mapstruct.IterableMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

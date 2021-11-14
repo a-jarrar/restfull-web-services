@@ -23,7 +23,9 @@ public interface CartMapper {
     List<CartItemModel> CartItemList(List<CartItem> cartItem);
 
     @Named("nonCyclicCartItem")
-    @Mapping(target = "product", ignore = true)
+    @Mapping(target = "product.cartItem", ignore = true)
+    @Mapping(target = "product.brand", ignore = true)
+    @Mapping(target = "product.categorySet", ignore = true )
     @Mapping(target = "cart", ignore = true)
     CartItemModel nonCyclicCartItem(CartItem cartItem);
 

@@ -1,6 +1,5 @@
 package com.shopingcart.rest.services.restfullwebservices.brand;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.shopingcart.rest.services.restfullwebservices.product.Product;
 
 import javax.persistence.*;

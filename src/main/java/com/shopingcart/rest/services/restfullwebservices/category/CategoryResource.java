@@ -1,8 +1,5 @@
 package com.shopingcart.rest.services.restfullwebservices.category;
 
-import com.shopingcart.rest.services.restfullwebservices.product.Product;
-import com.shopingcart.rest.services.restfullwebservices.product.ProductMapper;
-import com.shopingcart.rest.services.restfullwebservices.product.ProductModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
