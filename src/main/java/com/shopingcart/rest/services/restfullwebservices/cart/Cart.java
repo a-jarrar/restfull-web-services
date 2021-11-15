@@ -23,7 +23,7 @@ public class Cart {
             cascade = CascadeType.ALL)
     private List<CartItem> cartItems;
 
-    @OneToOne(mappedBy = "cart")
+    @OneToOne(fetch = FetchType.LAZY)
     private OrderHeader orderHeader;
 
     protected Cart() {

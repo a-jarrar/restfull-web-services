@@ -16,19 +16,14 @@ public interface CartItemMapper {
 
     @Mapping(target = "product.cartItem", ignore = true)
     @Mapping(target = "product.brand", ignore = true)
+    @Mapping(target = "product.categorySet", ignore = true)
     @Mapping(target = "cart.cartItems", ignore = true)
-    @Mapping(target = "product.categorySet", qualifiedByName = "categorySet")
+    @Mapping(target = "cart.orderHeader", ignore = true)
+    @Mapping(target = "orderItem.cartItem", ignore = true)
+    @Mapping(target = "orderItem.orderHeader", ignore = true)
     CartItemModel entityToModel(CartItem entity);
 
     CartItem modelToEntity(CartItemModel model);
-
-    @Named("categorySet")
-    @IterableMapping(qualifiedByName = "ignoreProduct")
-    Set<CategoryModel> categorySet(Set<Category> categorySet);
-
-    @Named("ignoreProduct")
-    @Mapping(target = "productSet", ignore = true)
-    CategoryModel ignoreProduct(Category category);
 
     static CartItemMapper INSTANCE = Mappers.getMapper(CartItemMapper.class);
 }

@@ -1,7 +1,9 @@
 package com.shopingcart.rest.services.restfullwebservices.order;
 
 import com.shopingcart.rest.services.restfullwebservices.cart.Cart;
+import com.shopingcart.rest.services.restfullwebservices.cart.CartModel;
 import com.shopingcart.rest.services.restfullwebservices.orderItem.OrderItem;
+import com.shopingcart.rest.services.restfullwebservices.orderItem.OrderItemModel;
 
 import java.util.Date;
 import java.util.List;
@@ -13,13 +15,13 @@ public class OrderHeaderModel {
     private String description;
     private Date creationDate;
     private Date estimatedDeliveryDate;
-    private Cart cart;
-    private List<OrderItem> orderItemList;
+    private CartModel cart;
+    private List<OrderItemModel> orderItemList;
 
     public OrderHeaderModel() {
     }
 
-    public OrderHeaderModel(Integer orderId, String orderName, String description, Date creationDate, Date estimatedDeliveryDate, Cart cart, List<OrderItem> orderItemList) {
+    public OrderHeaderModel(Integer orderId, String orderName, String description, Date creationDate, Date estimatedDeliveryDate, CartModel cart, List<OrderItemModel> orderItemList) {
         this.orderId = orderId;
         this.orderName = orderName;
         this.description = description;
@@ -69,19 +71,19 @@ public class OrderHeaderModel {
         this.estimatedDeliveryDate = estimatedDeliveryDate;
     }
 
-    public Cart getCart() {
+    public CartModel getCart() {
         return cart;
     }
 
-    public void setCart(Cart cart) {
+    public void setCart(CartModel cart) {
         this.cart = cart;
     }
 
-    public List<OrderItem> getOrderItemList() {
+    public List<OrderItemModel> getOrderItemList() {
         return orderItemList;
     }
 
-    public void setOrderItemList(List<OrderItem> orderItemList) {
+    public void setOrderItemList(List<OrderItemModel> orderItemList) {
         this.orderItemList = orderItemList;
     }
 }

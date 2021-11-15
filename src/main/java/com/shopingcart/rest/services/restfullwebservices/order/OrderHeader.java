@@ -21,8 +21,7 @@ public class OrderHeader {
     @OneToMany(mappedBy = "orderHeader")
     private List<OrderItem> orderItemList;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "cart_id", nullable = false)
+    @OneToOne(mappedBy = "orderHeader" , fetch = FetchType.LAZY)
     private Cart cart;
 
     public OrderHeader() {

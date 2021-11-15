@@ -1,6 +1,5 @@
 package com.shopingcart.rest.services.restfullwebservices.product;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.shopingcart.rest.services.restfullwebservices.brand.Brand;
 import com.shopingcart.rest.services.restfullwebservices.category.Category;
 import com.shopingcart.rest.services.restfullwebservices.cartItem.CartItem;

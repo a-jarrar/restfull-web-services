@@ -12,9 +12,11 @@ insert into category (category_id, category_name) values (1000, 'category1');
 insert into category (category_id, category_name) values (1001, 'category2');
 insert into category (category_id, category_name) values (1002, 'category3');
 
+insert into order_header (order_Id, order_Name, description) values (1000, 'order hrader 1', 'my order header 1');
+insert into order_header (order_Id, order_Name, description) values (1001, 'order header 2', 'my order header 2');
 
-insert into cart (cart_id, total_price) values (1000, 124.32);
-insert into cart (cart_id, total_price) values (1001, 433.55);
+insert into cart (cart_id, total_price, order_header_order_id) values (1000, 124.32, 1000);
+insert into cart (cart_id, total_price, order_header_order_id) values (1001, 433.55, 1001);
 
 insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1001, 44.85, 1, 1000, 1000);
 insert into cart_item (cart_item_seq_Id, price, quantity, cart_cart_Id, product_product_Id) values (1002, 42.5, 2, 1000, 1002);
@@ -34,6 +36,10 @@ insert into products_categories (Product_Id, category_id) values (1001, 1001);
 insert into products_categories (Product_Id, category_id) values (1003, 1001);
 insert into products_categories (Product_Id, category_id) values (1004, 1001);
 
-insert into order_header (order_Id, order_Name, description, cart_Id) values (1000, 'order hrader 1', 'my order header 1', 1000);
-insert into order_header (order_Id, order_Name, description, cart_Id) values (1001, 'order header 2', 'my order header 2', 1001);
-
+insert into order_item (order_item_seq_id, description, price,  quantity, cart_item_cart_item_seq_id, order_header_order_id) values (1000, 'my order item 1', 11.44, 1, 1001, 1000);
+insert into order_item (order_item_seq_id, description, price,  quantity, cart_item_cart_item_seq_id, order_header_order_id) values (1001, 'my order item 2', 31.2, 1, 1002, 1000);
+insert into order_item (order_item_seq_id, description, price,  quantity, cart_item_cart_item_seq_id, order_header_order_id) values (1002, 'my order item 3', 51.43, 1, 1003, 1000);
+insert into order_item (order_item_seq_id, description, price,  quantity, cart_item_cart_item_seq_id, order_header_order_id) values (1003, 'my order item 4', 31.2, 1, 1004, 1001);
+insert into order_item (order_item_seq_id, description, price,  quantity, cart_item_cart_item_seq_id, order_header_order_id) values (1004, 'my order item 5', 54.6, 1, 1005, 1001);
+insert into order_item (order_item_seq_id, description, price,  quantity, cart_item_cart_item_seq_id, order_header_order_id) values (1005, 'my order item 6', 132.1, 1, 1006, 1001);
+insert into order_item (order_item_seq_id, description, price,  quantity, cart_item_cart_item_seq_id, order_header_order_id) values (1006, 'my order item 7', 66.6, 1, 1007, 1001);

@@ -1,7 +1,7 @@
 package com.shopingcart.rest.services.restfullwebservices.cart;
 
 import com.shopingcart.rest.services.restfullwebservices.cartItem.CartItemModel;
-import com.shopingcart.rest.services.restfullwebservices.order.OrderHeader;
+import com.shopingcart.rest.services.restfullwebservices.order.OrderHeaderModel;
 
 import java.util.Date;
 import java.util.List;
@@ -12,12 +12,12 @@ public class CartModel {
     private Double totalPrice;
     private Date creationDate;
     private List<CartItemModel> cartItems;
-    private OrderHeader orderHeader;
+    private OrderHeaderModel orderHeader;
 
     public CartModel() {
     }
 
-    public CartModel(Integer cartId, Double totalPrice, Date creationDate, List<CartItemModel> cartItems, OrderHeader orderHeader) {
+    public CartModel(Integer cartId, Double totalPrice, Date creationDate, List<CartItemModel> cartItems, OrderHeaderModel orderHeader) {
         this.cartId = cartId;
         this.totalPrice = totalPrice;
         this.creationDate = creationDate;
@@ -57,11 +57,11 @@ public class CartModel {
         this.cartItems = cartItems;
     }
 
-    public OrderHeader getOrderHeader() {
+    public OrderHeaderModel getOrderHeader() {
         return orderHeader;
     }
 
-    public void setOrderHeader(OrderHeader orderHeader) {
+    public void setOrderHeader(OrderHeaderModel orderHeader) {
         this.orderHeader = orderHeader;
     }
 }

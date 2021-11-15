@@ -1,6 +1,7 @@
 package com.shopingcart.rest.services.restfullwebservices.cartItem;
 
 import com.shopingcart.rest.services.restfullwebservices.cart.CartModel;
+import com.shopingcart.rest.services.restfullwebservices.orderItem.OrderItemModel;
 import com.shopingcart.rest.services.restfullwebservices.product.ProductModel;
 
 public class CartItemModel {
@@ -10,17 +11,19 @@ public class CartItemModel {
     private Integer quantity;
     private ProductModel product;
     private CartModel cart;
+    private OrderItemModel orderItem;
+
 
     public CartItemModel() {
     }
 
-    public CartItemModel(Integer cartItemSeqId, Double price,
-                         ProductModel product, CartModel cart, Integer quantity) {
+    public CartItemModel(Integer cartItemSeqId, Double price, Integer quantity, ProductModel product, CartModel cart, OrderItemModel orderItem) {
         this.cartItemSeqId = cartItemSeqId;
         this.price = price;
+        this.quantity = quantity;
         this.product = product;
         this.cart = cart;
-        this.quantity = quantity;
+        this.orderItem = orderItem;
     }
 
     public Integer getCartItemSeqId() {
@@ -61,5 +64,13 @@ public class CartItemModel {
 
     public void setCart(CartModel cart) {
         this.cart = cart;
+    }
+
+    public OrderItemModel getOrderItem() {
+        return orderItem;
+    }
+
+    public void setOrderItem(OrderItemModel orderItem) {
+        this.orderItem = orderItem;
     }
 }

@@ -1,7 +1,6 @@
 package com.shopingcart.rest.services.restfullwebservices.cartItem;
 
 import com.shopingcart.rest.services.restfullwebservices.cart.Cart;
-import com.shopingcart.rest.services.restfullwebservices.order.OrderHeader;
 import com.shopingcart.rest.services.restfullwebservices.orderItem.OrderItem;
 import com.shopingcart.rest.services.restfullwebservices.product.Product;
 

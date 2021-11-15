@@ -1,5 +1,7 @@
 package com.shopingcart.rest.services.restfullwebservices.orderItem;
 
+import com.shopingcart.rest.services.restfullwebservices.cartItem.CartItemMapper;
+import com.shopingcart.rest.services.restfullwebservices.cartItem.CartItemModel;
 import com.shopingcart.rest.services.restfullwebservices.order.OrderHeaderModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +25,7 @@ public class OrderItemResource {
                 .stream().map(OrderItemMapper.INSTANCE::entityToModel).collect(Collectors.toList());
     }
 
-    @GetMapping("/orderItems/orderItemSeqId}")
+    @GetMapping("/orderItems/{orderItemSeqId}")
     public Optional<OrderItemModel> retrieveOrderItem(@PathVariable Integer orderItemSeqId) {
         return orderItemRepository.findById(orderItemSeqId).map(OrderItemMapper.INSTANCE::entityToModel);
     }

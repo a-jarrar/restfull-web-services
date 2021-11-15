@@ -18,8 +18,7 @@ public class OrderItem {
     @ManyToOne( fetch = FetchType.LAZY)
     private OrderHeader orderHeader;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "cart_Item_seq_id", nullable = false)
+    @OneToOne(fetch = FetchType.LAZY)
     private CartItem cartItem;
 
     public OrderItem() {

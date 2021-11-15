@@ -1,7 +1,7 @@
 package com.shopingcart.rest.services.restfullwebservices.orderItem;
 
-import com.shopingcart.rest.services.restfullwebservices.cartItem.CartItem;
-import com.shopingcart.rest.services.restfullwebservices.order.OrderHeader;
+import com.shopingcart.rest.services.restfullwebservices.cartItem.CartItemModel;
+import com.shopingcart.rest.services.restfullwebservices.order.OrderHeaderModel;
 
 public class OrderItemModel {
 
@@ -9,13 +9,13 @@ public class OrderItemModel {
     private String description;
     private Integer quantity;
     private Double price;
-    private CartItem cartItem;
-    private OrderHeader orderHeader;
+    private CartItemModel cartItem;
+    private OrderHeaderModel orderHeader;
 
     public OrderItemModel() {
     }
 
-    public OrderItemModel(Integer orderItemSeqId, String description, Integer quantity, Double price, CartItem cartItem, OrderHeader orderHeader) {
+    public OrderItemModel(Integer orderItemSeqId, String description, Integer quantity, Double price, CartItemModel cartItem, OrderHeaderModel orderHeader) {
         this.orderItemSeqId = orderItemSeqId;
         this.description = description;
         this.quantity = quantity;
@@ -56,19 +56,19 @@ public class OrderItemModel {
         this.price = price;
     }
 
-    public CartItem getCartItem() {
+    public CartItemModel getCartItem() {
         return cartItem;
     }
 
-    public void setCartItem(CartItem cartItem) {
+    public void setCartItem(CartItemModel cartItem) {
         this.cartItem = cartItem;
     }
 
-    public OrderHeader getOrderHeader() {
+    public OrderHeaderModel getOrderHeader() {
         return orderHeader;
     }
 
-    public void setOrderHeader(OrderHeader orderHeader) {
+    public void setOrderHeader(OrderHeaderModel orderHeader) {
         this.orderHeader = orderHeader;
     }
 }
