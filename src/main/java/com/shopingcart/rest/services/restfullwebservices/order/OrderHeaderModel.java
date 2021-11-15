@@ -1,8 +1,6 @@
 package com.shopingcart.rest.services.restfullwebservices.order;
 
-import com.shopingcart.rest.services.restfullwebservices.cart.Cart;
 import com.shopingcart.rest.services.restfullwebservices.cart.CartModel;
-import com.shopingcart.rest.services.restfullwebservices.orderItem.OrderItem;
 import com.shopingcart.rest.services.restfullwebservices.orderItem.OrderItemModel;
 
 import java.util.Date;

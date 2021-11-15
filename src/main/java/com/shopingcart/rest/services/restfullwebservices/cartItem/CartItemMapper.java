@@ -1,15 +1,8 @@
 package com.shopingcart.rest.services.restfullwebservices.cartItem;
 
-import com.shopingcart.rest.services.restfullwebservices.category.Category;
-import com.shopingcart.rest.services.restfullwebservices.category.CategoryModel;
-import org.mapstruct.IterableMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Named;
 import org.mapstruct.factory.Mappers;
-
-import java.util.List;
-import java.util.Set;
 
 @Mapper
 public interface CartItemMapper {

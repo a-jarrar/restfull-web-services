@@ -1,10 +1,7 @@
 package com.shopingcart.rest.services.restfullwebservices.orderItem;
 
-import com.shopingcart.rest.services.restfullwebservices.order.OrderHeaderMapper;
-import com.shopingcart.rest.services.restfullwebservices.order.OrderHeaderModel;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.annotation.AccessType;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Field;
