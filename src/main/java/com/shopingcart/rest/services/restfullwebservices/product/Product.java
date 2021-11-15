@@ -35,7 +35,6 @@ public class Product{
     private Set<Category> categorySet = new HashSet<>();
 
     @ManyToOne( fetch = FetchType.LAZY)
-    @JsonIgnore
     private Brand brand;
 
     @OneToMany(mappedBy = "product")

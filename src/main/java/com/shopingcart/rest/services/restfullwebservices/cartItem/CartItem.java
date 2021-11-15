@@ -1,6 +1,8 @@
 package com.shopingcart.rest.services.restfullwebservices.cartItem;
 
 import com.shopingcart.rest.services.restfullwebservices.cart.Cart;
+import com.shopingcart.rest.services.restfullwebservices.order.OrderHeader;
+import com.shopingcart.rest.services.restfullwebservices.orderItem.OrderItem;
 import com.shopingcart.rest.services.restfullwebservices.product.Product;
 
 import javax.persistence.*;
@@ -22,14 +24,20 @@ public class CartItem {
     @ManyToOne(fetch = FetchType.LAZY)
     private Cart cart;
 
+    @OneToOne(mappedBy = "cartItem")
+    private OrderItem orderItem;
+
     protected CartItem() {
 
     }
 
-    public CartItem(Integer cartItemSeqId, Double price, Integer quantity) {
+    public CartItem(Integer cartItemSeqId, Double price, Integer quantity, Product product, Cart cart, OrderItem orderItem) {
         this.cartItemSeqId = cartItemSeqId;
         this.price = price;
         this.quantity = quantity;
+        this.product = product;
+        this.cart = cart;
+        this.orderItem = orderItem;
     }
 
     public Integer getCartItemSeqId() {
@@ -70,5 +78,13 @@ public class CartItem {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+
+    public OrderItem getOrderItem() {
+        return orderItem;
+    }
+
+    public void setOrderItem(OrderItem orderItem) {
+        this.orderItem = orderItem;
     }
 }

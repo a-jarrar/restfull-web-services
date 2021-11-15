@@ -1,10 +1,9 @@
 package com.shopingcart.rest.services.restfullwebservices.cart;
 
 import com.shopingcart.rest.services.restfullwebservices.cartItem.CartItem;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import com.shopingcart.rest.services.restfullwebservices.order.OrderHeader;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
@@ -20,17 +19,23 @@ public class Cart {
     private Double totalPrice;
     private Date creationDate;
 
-    @OneToMany(mappedBy = "cart")
+    @OneToMany(mappedBy = "cart", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
     private List<CartItem> cartItems;
+
+    @OneToOne(mappedBy = "cart")
+    private OrderHeader orderHeader;
 
     protected Cart() {
 
     }
 
-    public Cart(Integer cartId, Double totalPrice, Date creationDate) {
+    public Cart(Integer cartId, Double totalPrice, Date creationDate, List<CartItem> cartItems, OrderHeader orderHeader) {
         this.cartId = cartId;
         this.totalPrice = totalPrice;
         this.creationDate = creationDate;
+        this.cartItems = cartItems;
+        this.orderHeader = orderHeader;
     }
 
     public int getCartId() {
@@ -63,5 +68,13 @@ public class Cart {
 
     public void setCartItems(List<CartItem> cartItems) {
         this.cartItems = cartItems;
+    }
+
+    public OrderHeader getOrderHeader() {
+        return new OrderHeader();
+    }
+
+    public void setOrderHeader(OrderHeader orderHeader) {
+        this.orderHeader = orderHeader;
     }
 }

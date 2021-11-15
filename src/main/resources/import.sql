@@ -33,3 +33,7 @@ insert into products_categories (Product_Id, category_id) values (1003, 1000);
 insert into products_categories (Product_Id, category_id) values (1001, 1001);
 insert into products_categories (Product_Id, category_id) values (1003, 1001);
 insert into products_categories (Product_Id, category_id) values (1004, 1001);
+
+insert into order_header (order_Id, order_Name, description, cart_Id) values (1000, 'order hrader 1', 'my order header 1', 1000);
+insert into order_header (order_Id, order_Name, description, cart_Id) values (1001, 'order header 2', 'my order header 2', 1001);
+
