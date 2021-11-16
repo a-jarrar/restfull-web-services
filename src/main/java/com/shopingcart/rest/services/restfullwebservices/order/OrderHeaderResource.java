@@ -22,7 +22,7 @@ public class OrderHeaderResource {
                 .stream().map(OrderHeaderMapper.INSTANCE::entityToModel).collect(Collectors.toList());
     }
 
-    @GetMapping("/orders/orderId}")
+    @GetMapping("/orders/{orderId}")
     public Optional<OrderHeaderModel> retrieveOrder(@PathVariable Integer orderId) {
         return orderHeaderRepository.findById(orderId).map(OrderHeaderMapper.INSTANCE::entityToModel);
     }
