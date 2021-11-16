@@ -27,7 +27,7 @@ public class OrderItemResource {
         return orderItemRepository.findById(orderItemSeqId).map(OrderItemMapper.INSTANCE::entityToModel);
     }
 
-    @PostMapping("/orderItems/{orderItemSeqId}")
+    @PostMapping("/orderItems")
     public OrderItemModel createOrderItem(@RequestBody OrderItemModel orderItemModel) {
         return OrderItemMapper.INSTANCE
                 .entityToModel((orderItemRepository.save(OrderItemMapper.INSTANCE.modelToEntity(orderItemModel))));

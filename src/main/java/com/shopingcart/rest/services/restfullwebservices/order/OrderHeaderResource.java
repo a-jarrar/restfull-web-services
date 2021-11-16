@@ -27,7 +27,7 @@ public class OrderHeaderResource {
         return orderHeaderRepository.findById(orderId).map(OrderHeaderMapper.INSTANCE::entityToModel);
     }
 
-    @PostMapping("/orders/{orderId}")
+    @PostMapping("/orders")
     public OrderHeaderModel createOrder(@RequestBody OrderHeaderModel orderModel) {
         return OrderHeaderMapper.INSTANCE
                 .entityToModel((orderHeaderRepository.save(OrderHeaderMapper.INSTANCE.modelToEntity(orderModel))));
