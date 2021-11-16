@@ -14,6 +14,8 @@ import java.util.List;
 public interface CartMapper {
 
     @Mapping(target = "cartItems", qualifiedByName = "CartItemList")
+    @Mapping(target = "orderHeader.cart", ignore = true)
+    @Mapping(target = "orderHeader.orderItemList", ignore = true)
     CartModel entityToModel(Cart entity);
 
     Cart modelToEntity(CartModel model);
@@ -23,6 +25,7 @@ public interface CartMapper {
     List<CartItemModel> CartItemList(List<CartItem> cartItem);
 
     @Named("nonCyclicCartItem")
+    @Mapping(target = "orderItem", ignore = true )
     @Mapping(target = "product.cartItem", ignore = true)
     @Mapping(target = "product.brand", ignore = true)
     @Mapping(target = "product.categorySet", ignore = true )
